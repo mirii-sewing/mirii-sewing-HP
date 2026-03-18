@@ -7,17 +7,17 @@ const puppeteer = require('puppeteer');
 
         // Desktop
         await page.setViewport({ width: 1280, height: 3500 });
-        await page.goto('https://mirii-sewing.online/1day-lesson/', { waitUntil: 'networkidle2' });
+        await page.goto('https://mirii-sewing.online/', { waitUntil: 'networkidle2' });
         await new Promise(resolve => setTimeout(resolve, 3000));
-        await page.screenshot({ path: '/Users/ayumi/.gemini/antigravity/brain/b3195448-d29e-4066-a535-3f07e06d8a74/step2_1day_desktop.png', fullPage: true });
+        await page.screenshot({ path: '/Users/ayumi/.gemini/antigravity/brain/b3195448-d29e-4066-a535-3f07e06d8a74/step1_top_desktop.png', fullPage: true });
 
         // Mobile
         await page.setViewport({ width: 375, height: 4000, isMobile: true, hasTouch: true });
-        await page.goto('https://mirii-sewing.online/1day-lesson/', { waitUntil: 'networkidle2' });
+        await page.goto('https://mirii-sewing.online/', { waitUntil: 'networkidle2' });
         await new Promise(resolve => setTimeout(resolve, 3000));
-        await page.screenshot({ path: '/Users/ayumi/.gemini/antigravity/brain/b3195448-d29e-4066-a535-3f07e06d8a74/step2_1day_mobile.png', fullPage: true });
+        await page.screenshot({ path: '/Users/ayumi/.gemini/antigravity/brain/b3195448-d29e-4066-a535-3f07e06d8a74/step1_top_mobile.png', fullPage: true });
 
-        console.log("1Day Screenshots captured");
+        console.log("Screenshots captured");
     } catch (e) {
         console.error(e);
     } finally {
